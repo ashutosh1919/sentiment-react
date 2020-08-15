@@ -9,7 +9,7 @@ function App() {
 
   const handleClick = () => {
     if(value!== ""){
-      axios.post("http://localhost:5000/sentiment", {"sentence": value})
+      axios.post("https://sentiment-analysis-ashutosh.herokuapp.com//sentiment", {"sentence": value})
       .then((response) => {
         console.log(response);
         document.getElementsByClassName("sentiment-text")[0].innerText = response["data"]["sentiment"];
